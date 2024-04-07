@@ -1,97 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Liên hệ</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="lienhe.css">
 </head>
-
 <body>
-    <header class="ab">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/1.jpg" alt="Logo" width="100">
-                </a>
-            </div>
-            <a href="index.html">Trang chủ</a>
-            <a href="Gioithieu.html">Giới thiệu</a>
-            <a href="Sanpham.html">Sản phẩm</a>
-            <a href="Lienhe.html">Liên hệ</a>
-            <a href="Tintuc.html">Tin tức</a>
-            <div class="search-box">
-                <input type="text" placeholder="Tìm kiếm...">
-                <button type="submit">Tìm</button>
-            </div>
+    <div class="khung">
+        <div class="menu">
+            <a href="index.html"><img src="https://cdn.vn.garenanow.com/web/kg/home/images/logo-new.png" alt=""></a>
+            <ul>
+                <li><a href="index.html">Trang chủ  |</a></li>
+                <li><a href="tintuc.html">Tin Tức |</a></li> 
+                <li><a href="lienhe.html">Liên hệ |</a></li>
+                <li><a href="#">Giftcode |</a></li>
+                <li><a href="#">Tài khoản |</a></li>
+                <li><a href="#">Hợp tác |</a></li>
+            </ul>
         </div>
-    </header>
-    <h1>Liên hệ</h1>
+        <div class="banner">
+            <img src="https://lienquan.garena.vn/files/upload/images/1920x864%284%29.png" alt="">
+        </div>
+        <div class="noiDung">
+            <h1>Trang chủ</h1>
+            <div class="sukien">
 
-    <div class="contact-form">
-        <h2>Liên hệ</h2>
-        <form action="process-contact.php" method="post" onsubmit="return showFormData(event)">
-            <label for="name">Tên:</label>
-            <input type="text" id="name" name="name" placeholder="Nhập tên của bạn" required>
+                <div class="thumbnail">
+                    <img src="https://lienquan.garena.vn/files/posts/43d8ace8133292da664406d3befb144765fd6354a9a5f.png" alt="">
+                    <h2>LỊCH THI ĐẤU LƯỢT VỀ - VÒNG BẢNG (GIAI ĐOẠN 1)</h2>
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email của bạn" required>
+                <div class="thumbnail">
+                    <img src="https://lienquan.garena.vn/files/posts/5a4219fe11915dad261287ff743abaec65e6f329699b7.jpg" alt="">
+                    <h2>RA MẮT SỰ KIỆN ĐẠI HỘI AOG - SĂN QUÀ SỰ KIỆN</h2>
+                </div>
 
-            <label for="phone">Số điện thoại:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại của bạn" required>
+                <div class="thumbnail">
+                    <img src="https://lienquan.garena.vn/files/posts/5a4219fe11915dad261287ff743abaec65e6f329699b7.jpg" alt="">
+                    <h2>TỔNG HỢP SỰ KIỆN TẠI CỬA HÀNG (11/03 - 17/03)</h2>
+                </div>
 
-            <label for="message">Nội dung:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Nhập nội dung" required></textarea>
+                <div class="thumbnail">
+                    <img src="https://lienquan.garena.vn/files/posts/5c96eb2889f4de62e9f74436529d7fa465fd2eb50971f.jpg" alt="">
+                    <h2>TÔNG HỢP SỰ KIỆN TẠI CỬA HÀNG (25/03 - 31/03)</h2>
+                </div>
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Gửi</button>              
-        </form>
-        <div id="confirmationMessage"></div>
+                <div class="thumbnail">
+                    <img src="https://lienquan.garena.vn/files/posts/3591574521b486952f15d5b07d558cff65e15bb398a0d.jpg" alt="">
+                    <h2>TỔNG HỢP SỰ KIỆN TẠI CỬA HÀNG (04/03 - 10/03)</h2>
+                </div>
+
+                <div class="thumbnail">
+                    <img src="https://lienquan.garena.vn/files/posts/f1e7c1e11ff8d43e9c1618eb1c1a8d8965df076f59d8c.png" alt="">
+                    <h2>SỰ KIỆN SĂN QUÀ LIÊN QUÂN TRÊN ỨNG DỤNG </h2>
+                </div>
+            </div>
+            <hr>
+        </div>
     </div>
+    <div class="footer">
+        <img src="https://lienquan.garena.vn/asset/images/logo-footer.png?v=2" alt="">
 
-    <script>
-      function showFormData(event) {
-    event.preventDefault(); // Ngăn chặn gửi form mặc định
-
-    // Lấy thông tin đã nhập
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var message = document.getElementById("message").value;
-
-    // Tạo thông báo xác nhận
-    var confirmationMessage = "Thông báo xác nhận\n\n" +
-                              "Tên: " + name + "\n" +
-                              "Email: " + email + "\n" +
-                              "Số điện thoại: " + phone + "\n" +
-                              "Nội dung: " + message;
-
-    var confirmed = confirm(confirmationMessage + "\n \n"+"Xác nhận gửi dữ liệu đến server?");
-
-
-    if (confirmed) {
-    // Thông báo xác nhận đã được nhận, bạn có thể thực hiện các thao tác khác ở đây, ví dụ: gửi dữ liệu đến server
-    console.log("Đã gửi dữ liệu đến server");
-}
-         if (confirmed) {
-            document.getElementById("confirmationMessage").innerText = "\n \n" + "Thông báo xác nhận đã được nhận, dữ liệu sẽ được gửi đến server";
-            // Thực hiện các thao tác khác ở đây, ví dụ: gửi dữ liệu đến server
-        } else {
-            document.getElementById("confirmationMessage").innerText = "";
-            // Xóa thông báo xác nhận
-        }
-    
-        return false; // Ngăn chặn refresh trang
-
-
-}
-    </script>
-    <footer style="margin-top: 100px;">Sản phẩm đồ ăn bán chạy nhất © khanhbqph21610 Copyrighted
-        khanhbqph21610@fpt.edu.vn <p>🦕Trang thực
-            phẩm, sản phẩm sạch🦕<br>
-            (❤️ ω ❤️)</p>
-    </footer>
+    </div>
 </body>
-
 </html>
